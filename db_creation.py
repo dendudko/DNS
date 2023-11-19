@@ -35,6 +35,7 @@ def fill_table_from_file(file_name: str):
 
 @get_execution_time
 def create_db():
+    # Внешние ключи не создаю, все равно данные не изменяются
     cursor.execute('''
     drop table if exists t_branches;
     drop table if exists t_cities;
