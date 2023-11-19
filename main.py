@@ -18,7 +18,7 @@ days = {1: 'Понедельник', 2: 'Вторник', 3: 'Среда', 4: '�
 conn, cursor = get_db_connection()
 
 # Очевидно, писал код с принтами, перенаправляю вывод в файл, чтобы много не переделывать :)
-# sys.stdout = open('output.txt', 'wt', encoding='UTF-8')
+sys.stdout = open('output.txt', 'wt', encoding='UTF-8')
 
 
 # Отбивка дефисами для output-а
@@ -200,8 +200,8 @@ def calculations():
 
 
 if __name__ == '__main__':
-    # create_db()
-    # print(make_line().replace('\n', ''))
+    create_db()
+    print(make_line().replace('\n', ''))
 
     print(analytics_1_1(), make_line())
     print(analytics_1_2(), make_line())
